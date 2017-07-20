@@ -1,0 +1,76 @@
+﻿<%@ Master  Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="Consertando.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Consertando</title>
+    <link rel="shortcut icon" href="~/Imagens/favicon.ico" type="image/x-icon"/>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    .letraBranca
+    {
+        color:White;
+        background-color:White;
+    }
+    .letraAzul
+    {
+        color:#186ee2;
+        background-color:#186ee2;
+    }
+    </style>
+
+     <script type="text/javascript">
+         function seletor() {
+             this.style.color = "white";
+         }
+
+     
+       
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#2051a4;" onload="alteraCor()">
+    <form runat="server">
+    <div class="page" style="background-color:#2051a4;">
+        <div class="header" style="height:100px; background-image:url(Imagens/backgroundBlueDeitado.png);">
+            <div class="title">
+                <h1>
+                    Consertando na WEB
+                </h1>
+            </div>
+            <div style="float:left; position:absolute; margin-top:10px; margin-left:860px;"><img src="Imagens/Clov!System_2012_logo_MENOR.png" width="80" height="40" alt="clov!System" /></div>
+            <!-- <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+           <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>
+            </div>-->
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
